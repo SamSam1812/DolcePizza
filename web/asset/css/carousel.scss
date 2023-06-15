@@ -1,0 +1,103 @@
+
+#menu {
+  position: relative;
+  width: 100%;
+  .fondtree {
+    position: absolute;
+    width: 100%;
+  }
+  .assombrissement {
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+  }
+}
+.divMenu{
+  position: relative;
+  bottom: 355px;
+}
+carousel {
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: 6vmin;
+  input{
+    display: none;
+  }
+  page {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    transform: scale(0);
+    div {
+      display: flex;
+      justify-content: center;
+      .carouGrid{
+        display: grid;
+        justify-items: center;
+        width: fit-content;
+        background-color: #D7C0AE;
+        border-radius: 20px;
+        color: white;
+        font-family: 'Great Vibes', cursive;
+        img{
+          width: 500px;
+          border-top-left-radius: 10px ;
+          border-top-right-radius: 10px ;
+        }
+        span{
+          font-size: 40px;
+          margin-top: 20px;
+        }
+        .Ingre{
+          font-size: 30px;
+          font-family: 'Great Vibes', cursive;
+        }
+        h5{
+          margin-top: 10px;
+          color: #CD1818;
+        }
+      }
+    }
+    label {
+      cursor: pointer;
+      padding-top: 40px;
+      b{
+        color: white;
+        background: #675D50;
+        border: 1px solid #675D50;
+        font-family: 'Poppins', cursive;
+        padding: 5px 30px;
+        border-radius: 20px;
+        transition: 300ms;
+        font-size: 30px;
+      }
+      b:hover{
+        background: #313131;
+        border: white;
+      }
+    }
+  }
+  @for $i from 1 through 6 {
+    #page#{$i}cb:checked ~ {
+      #page#{$i} {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media (max-width: 500px){
+  carousel page div .carouGrid {
+    margin: 20px;
+  }
+}
+
+
+

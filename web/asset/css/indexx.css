@@ -1,5 +1,36 @@
-body {
-  background: #42455a;
+.fondPizzq {
+  width: 100%;
+  position: relative;
+}
+.fondPizzq .PizzaFondImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.fondPizzq .assombrissement {
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+.fondPizzq .assombrissement h1 {
+  font-family: "Kalam", cursive;
+  font-size: 4rem;
+  text-align: center;
+}
+.fondPizzq .assombrissement h4 {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 125px;
+  margin-top: 20px;
+}
+.fondPizzq .assombrissement p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 25px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -28,7 +59,8 @@ section:nth-child(4) {
 }
 
 section .container {
-  margin: 100px;
+  margin-top: 100px;
+  margin-bottom: 170px;
 }
 
 section h2 {
@@ -39,9 +71,11 @@ section h2 {
 }
 
 section .text-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
   gap: 100px;
+  padding: 0 36px;
 }
 
 section .text-container .text-box h3 {
@@ -52,15 +86,6 @@ section .text-container .text-box h3 {
   margin-top: 10px;
 }
 
-@media (max-width: 900px) {
-  section h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  section .text-container {
-    flex-direction: column;
-  }
-}
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -77,9 +102,8 @@ section .text-container .text-box h3 {
   font-family: "Poppins", sans serif;
   font-size: 120px;
   font-weight: bold;
-  width: 400px;
-  height: 250px;
-  margin: 80px auto;
+  width: 100%;
+  margin: 80px 0;
   border-radius: 10px;
   perspective: 1400px;
 }
@@ -168,36 +192,6 @@ section .text-container .text-box h3 {
   color: rgb(189, 189, 189);
 }
 
-.fondPizzq {
-  width: 100%;
-  position: relative;
-}
-.fondPizzq .PizzaFondImg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.fondPizzq .assombrissement {
-  background: rgba(0, 0, 0, 0.65);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-}
-.fondPizzq .assombrissement h1 {
-  font-family: "Kalam", cursive;
-  font-size: 4rem;
-  text-align: center;
-}
-.fondPizzq .assombrissement p {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 25px;
-  font-family: "Poppins", sans-serif;
-}
-
 .flexCard {
   display: flex;
   align-items: center;
@@ -253,6 +247,225 @@ section .text-container .text-box h3 {
 .grid {
   display: grid;
   gap: 50px;
+}
+
+#menu {
+  position: relative;
+  width: 100%;
+}
+#menu .fondtree {
+  position: absolute;
+  width: 100%;
+}
+#menu .assombrissement {
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+.divMenu {
+  position: relative;
+  bottom: 355px;
+}
+
+carousel {
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: 6vmin;
+}
+carousel input {
+  display: none;
+}
+carousel page {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  transform: scale(0);
+}
+carousel page div {
+  display: flex;
+  justify-content: center;
+}
+carousel page div .carouGrid {
+  display: grid;
+  justify-items: center;
+  width: fit-content;
+  background-color: #D7C0AE;
+  border-radius: 20px;
+  color: white;
+  font-family: "Great Vibes", cursive;
+}
+carousel page div .carouGrid img {
+  width: 500px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+carousel page div .carouGrid span {
+  font-size: 40px;
+  margin-top: 20px;
+}
+carousel page div .carouGrid .Ingre {
+  font-size: 30px;
+  font-family: "Great Vibes", cursive;
+}
+carousel page div .carouGrid h5 {
+  margin-top: 10px;
+  color: #CD1818;
+}
+carousel page label {
+  cursor: pointer;
+  padding-top: 40px;
+}
+carousel page label b {
+  color: white;
+  background: #675D50;
+  border: 1px solid #675D50;
+  font-family: "Poppins", cursive;
+  padding: 5px 30px;
+  border-radius: 20px;
+  transition: 300ms;
+  font-size: 30px;
+}
+carousel page label b:hover {
+  background: #313131;
+  border: white;
+}
+carousel #page1cb:checked ~ #page1 {
+  transform: scale(1);
+}
+carousel #page2cb:checked ~ #page2 {
+  transform: scale(1);
+}
+carousel #page3cb:checked ~ #page3 {
+  transform: scale(1);
+}
+carousel #page4cb:checked ~ #page4 {
+  transform: scale(1);
+}
+carousel #page5cb:checked ~ #page5 {
+  transform: scale(1);
+}
+carousel #page6cb:checked ~ #page6 {
+  transform: scale(1);
+}
+
+@media (max-width: 500px) {
+  carousel page div .carouGrid {
+    margin: 20px;
+  }
+}
+footer {
+  background: black;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+footer div {
+  display: grid;
+  justify-items: center;
+}
+footer .map {
+  display: grid;
+  justify-items: center;
+  gap: 50px;
+}
+footer .map .internMap {
+  width: 100%;
+}
+footer .map .internMap iframe {
+  border-radius: 20px;
+}
+footer .textcontact {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .textcontact h4 {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+footer .textcontact i {
+  font-size: 35px;
+  margin: 20px 0;
+  color: #675D50;
+}
+footer .textcontact a {
+  color: white;
+  font-size: 20px;
+}
+footer .textcontact a:hover {
+  color: #313131;
+}
+
+@media (max-width: 990px) {
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+}
+body {
+  background: #42455a;
+  font-family: "Poppins", sans-serif;
+}
+
+#scrollUp {
+  position: fixed;
+  bottom: 10px;
+  right: -100px;
+  opacity: 1;
+  z-index: 10;
+}
+
+@media (max-width: 980px) {
+  section .text-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .pizzaR {
+    width: 400px;
+  }
+  .flexCard {
+    width: 100%;
+  }
+  .flexCard .titleTextCard h3 {
+    font-size: 35px;
+  }
+  .flexCard .titleTextCard p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .flexCard img {
+    display: none;
+  }
+  .flexCard .titleTextCard {
+    padding: 57px;
+  }
+}
+@media (max-width: 425px) {
+  #present {
+    background: #313131;
+    padding: 25px;
+  }
+  .flexCard .titleTextCard {
+    padding: 15px;
+  }
+}
+@media (max-width: 350px) {
+  .carte p {
+    padding: 10px;
+  }
 }
 
 /*# sourceMappingURL=indexx.css.map */
