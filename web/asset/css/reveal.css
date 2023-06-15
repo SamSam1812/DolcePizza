@@ -1,42 +1,48 @@
-section{
+section {
   min-height: 100vh;
   display: flex;
   justify-content: center;
 }
-section:nth-child(1){
-  color: #e0ffff;
-}
-section:nth-child(2){
-  color: #edefef;
 
-}
-section:nth-child(3){
+section:nth-child(1) {
   color: #e0ffff;
-  background-image: url(../img/bois3.webp);
 }
-section:nth-child(4){
+
+section:nth-child(2) {
+  color: #edefef;
+  background-image: url(../img/bois3.jpg);
+}
+
+section:nth-child(3) {
+  color: #e0ffff;
+}
+
+section:nth-child(4) {
   color: #42455a;
   background: #e0ffff;
 }
-section .container{
+
+section .container {
   margin-top: 100px;
   margin-bottom: 170px;
 }
-section h2{
+
+section h2 {
   font-size: 50px;
   text-align: center;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
-section .text-container{
+
+section .text-container {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 100px;
-  padding: 0 36px
+  padding: 0 36px;
 }
 
-section .text-container .text-box h3{
+section .text-container .text-box h3 {
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -44,13 +50,16 @@ section .text-container .text-box h3{
   margin-top: 10px;
 }
 
-.reveal{
+.reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
   transition: 1s all ease;
 }
-.reveal.active{
+
+.reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
+
+/*# sourceMappingURL=reveal.css.map */

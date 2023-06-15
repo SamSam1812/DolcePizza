@@ -46,11 +46,11 @@ section:nth-child(1) {
 
 section:nth-child(2) {
   color: #edefef;
-  background-image: url(../img/bois3.jpg);
 }
 
 section:nth-child(3) {
   color: #e0ffff;
+  background-image: url(../img/bois3.webp);
 }
 
 section:nth-child(4) {
